@@ -33,8 +33,8 @@ export const config = getDefaultConfig({
     },
   ],
   chains: [
-    arbitrum,
     arbitrumStylus,
+    arbitrum,
     arbitrumSepolia,
     arbitrumNova,
     arbitrumGoerli,
