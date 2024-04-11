@@ -11,6 +11,7 @@ import {
   arbitrumGoerli,
   localhost,
 } from "wagmi/chains"
+import { arbitrumStylus } from "@/utils/arbitrumStylus"
 
 const { wallets } = getDefaultWallets()
 
@@ -32,6 +33,7 @@ export const config = getDefaultConfig({
     },
   ],
   chains: [
+    arbitrumStylus,
     arbitrum,
     arbitrumSepolia,
     arbitrumNova,
