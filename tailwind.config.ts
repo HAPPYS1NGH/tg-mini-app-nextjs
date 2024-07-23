@@ -7,7 +7,7 @@ const config = {
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
-	],
+  ],
   prefix: "",
   theme: {
     container: {
@@ -19,10 +19,22 @@ const config = {
     },
     extend: {
       colors: {
+        rabble: "#08F7AF",
+        back: "#E7E7E7",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
+        background: "var(--tg-theme-bg-color)",
+        "secondary-background": "var(--tg-theme-secondary-bg-color)",
+        //         var(--tg-theme-bg-color)
+        // var(--tg-theme-text-color)
+        // var(--tg-theme-hint-color)
+        // var(--tg-theme-link-color)
+        // var(--tg-theme-button-color)
+        // var(--tg-theme-button-text-color)
+        // 
+        color: "var(--tg-theme-text-color)",
+        "subtitle-color": "var(--tg-theme-subtitle-text-color)",
         foreground: "hsl(var(--foreground))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
@@ -71,6 +83,10 @@ const config = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+      },
+      fontFamily: {
+        sans: ['var(--font-outfit)'],
+        mono: ['var(--font-beVietnamPro)'],
       },
     },
   },
