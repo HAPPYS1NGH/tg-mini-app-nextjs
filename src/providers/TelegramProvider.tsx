@@ -7,6 +7,7 @@ import { ErrorBoundary } from "@/components/ErrorBoundary";
 import { ErrorPage } from "@/components/ErrorPage";
 import { useTelegramMock } from "@/hooks/useTelegramMock";
 import { useDidMount } from "@/hooks/useDidMount";
+import Image from "next/image";
 
 // function App(props: PropsWithChildren) {
 //   const lp = useLaunchParams();
@@ -67,8 +68,18 @@ export function TelegramProvider(props: PropsWithChildren) {
       <RootInner {...props} />
     </ErrorBoundary>
   ) : (
-    <div className=" absolute top-0 left-0 flex items-center justify-center w-full h-full">
-      Loading
+    <div className=" absolute top-0 left-0 flex flex-col items-center  gap-4 justify-center w-full h-full">
+      <Image src={"/butterfly.svg"} alt="Rabble" width={38} height={64} />
+      <div className="flex gap-4">
+        <p>Loading</p>
+        <Image
+          src={"/loader.svg"}
+          alt="loader"
+          width={24}
+          height={24}
+          className=" animate-spin"
+        />
+      </div>
     </div>
   );
 }

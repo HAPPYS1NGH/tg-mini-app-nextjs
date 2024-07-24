@@ -5,9 +5,8 @@ import {
   ledgerWallet,
 } from "@rainbow-me/rainbowkit/wallets"
 import {
+  arbitrum,
   arbitrumSepolia,
-  arbitrumNova,
-  arbitrumGoerli,
   localhost,
 } from "wagmi/chains"
 
@@ -32,11 +31,10 @@ export const config = getDefaultConfig({
   ],
   chains: [
     arbitrumSepolia,
-    arbitrumNova,
-    arbitrumGoerli,
+    arbitrum,
     localhost,
     ...(process.env.NEXT_PUBLIC_ENABLE_TESTNETS === "true"
-      ? [arbitrumSepolia, arbitrumNova, arbitrumGoerli]
+      ? [arbitrumSepolia, arbitrum, localhost]
       : []),
   ],
   ssr: true,
