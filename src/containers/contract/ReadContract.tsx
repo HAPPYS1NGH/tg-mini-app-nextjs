@@ -18,13 +18,16 @@ export function ReadContract() {
   console.log(counter, status, isLoading, error);
 
   return (
-    <div className="text-center">
+    <div className="text-left my-8">
       {isLoading ? (
         <div>Loading</div>
       ) : error ? (
         <div className="text-red-500">Error</div>
       ) : (
-        <div className="text-2xl">Counter: {counter?.toString()}</div>
+        <div className="text-2xl">
+          Current Number:{" "}
+          <span className="text-rabble">{counter?.toString()}</span>
+        </div>
       )}
     </div>
   );
