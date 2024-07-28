@@ -36,11 +36,11 @@ function Layout({ children }: { children: React.ReactNode }) {
   }, [bb, router, pathname]);
 
   return (
-    <>
+    <main className="bg-background">
       <Navbar />
-      <main className=" mx-8 my-4 ">{children}</main>
+      <main className=" mx-3 my-4 ">{children}</main>
       <Toaster richColors />
-    </>
+    </main>
   );
 }
 
