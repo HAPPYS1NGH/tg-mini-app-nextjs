@@ -8,7 +8,7 @@ This starter kit helps you create a mini application integrated with Ethereum an
 
 Ensure you have the following installed on your machine:
 
-- [Node.js](https://nodejs.org/) (v14 or higher)
+- [Node.js](https://nodejs.org/) (v16 or higher)
 - [npm](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/)
 - [ngrok](https://ngrok.com/) or [localtunnel](https://localtunnel.github.io/www/)
 
@@ -128,53 +128,75 @@ The project follows a standard directory structure for a Next.js application. He
 ├── package.json
 ├── postcss.config.js
 ├── public
-│   └── arbitrum.svg
+│   ├── arbitrum.svg
+│   ├── arrow.svg
+│   ├── butterfly.svg
+│   ├── loader.svg
+│   └── rabble.svg
 ├── src
-│   ├── app
-│   │   ├── contract
-│   │   │   └── page.tsx
-│   │   ├── favicon.ico
-│   │   ├── globals.css
-│   │   ├── layout.tsx
-│   │   └── page.tsx
-│   ├── components
-│   │   ├── ErrorBoundary.tsx
-│   │   ├── ErrorPage.tsx
-│   │   ├── shared
-│   │   │   └── Navbar.tsx
-│   │   └── ui
-│   │       ├── button.tsx
-│   │       ├── input.tsx
-│   │       └── sonner.tsx
-│   ├── constants
-│   │   ├── abi.ts
-│   │   └── index.ts
-│   ├── containers
-│   │   ├── contract
-│   │   │   ├── ReadContract.tsx
-│   │   │   └── WriteContract.tsx
-│   │   └── home
-│   │       └── Profile.tsx
-│   ├── hooks
-│   │   ├── useClientOnce.ts
-│   │   ├── useDidMount.ts
-│   │   └── useTelegramMock.ts
-│   ├── lib
-│   │   └── utils.ts
-│   ├── providers
-│   │   ├── Layout.tsx
-│   │   ├── TelegramProvider.tsx
-│   │   └── Web3Provider.tsx
-│   └── utils
-│       └── config.ts
+│   ├── app
+│   │   ├── contract
+│   │   │   └── page.tsx
+│   │   ├── favicon.ico
+│   │   ├── globals.css
+│   │   ├── layout.tsx
+│   │   └── page.tsx
+│   ├── assets
+│   │   └── Arrow.tsx
+│   ├── components
+│   │   ├── ErrorBoundary.tsx
+│   │   ├── ErrorPage.tsx
+│   │   ├── Popup.tsx
+│   │   ├── shared
+│   │   │   └── Navbar.tsx
+│   │   └── ui
+│   │       ├── button.tsx
+│   │       ├── input.tsx
+│   │       └── sonner.tsx
+│   ├── constants
+│   │   ├── abi.ts
+│   │   └── index.ts
+│   ├── containers
+│   │   ├── contract
+│   │   │   ├── ReadContract.tsx
+│   │   │   └── WriteContract.tsx
+│   │   └── home
+│   │       └── Profile.tsx
+│   ├── hooks
+│   │   ├── useClientOnce.ts
+│   │   ├── useDidMount.ts
+│   │   └── useTelegramMock.ts
+│   ├── lib
+│   │   └── utils.ts
+│   ├── providers
+│   │   ├── Layout.tsx
+│   │   ├── TelegramProvider.tsx
+│   │   └── Web3Provider.tsx
+│   └── utils
+│       └── config.ts
 ├── tailwind.config.ts
 └── tsconfig.json
 ```
+
+## FAQs
+
+### What are Telegram Mini Apps?
+
+Web Apps inside Telegram in the form of a bot.
+
+### What is different in Mini Apps?
+
+Mini Apps offer Telegram-specific UI elements like Main Button, Popups, Telegram Theme Params, and Viewport. They also provide features like Telegram Authentication, Cloud Storage, and more.
+
+### Can you tell what all things I need to do to convert my WebApp to a Mini App?
+
+Your normal website will also work fine in most cases if you do not have in-app links to other domains.
 
 ## Support
 
 If you encounter any issues or have questions:
 
+- **Telegram:** [Rabble Mini App Group](https://t.me/+rFqLyk4_W-diZDZl)
 - **Twitter:** [@happys1ngh](https://twitter.com/happys1ngh)
 - **GitHub Issues:** [ETH Telegram Mini App Starter Kit Issues](https://github.com/HAPPYS1NGH/tg-mini-app-nextjs/issues)
 

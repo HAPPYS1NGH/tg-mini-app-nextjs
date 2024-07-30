@@ -30,9 +30,7 @@ export const config = getDefaultConfig({
     },
   ],
   chains: [
-    arbitrumSepolia,
     arbitrum,
-    localhost,
     ...(process.env.NEXT_PUBLIC_ENABLE_TESTNETS === "true"
       ? [arbitrumSepolia, arbitrum, localhost]
       : []),
