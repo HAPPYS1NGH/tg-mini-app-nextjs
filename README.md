@@ -10,7 +10,6 @@ Ensure you have the following installed on your machine:
 
 - [Node.js](https://nodejs.org/) (v16 or higher)
 - [npm](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/)
-- [ngrok](https://ngrok.com/) or [localtunnel](https://localtunnel.github.io/www/)
 
 ### Setup Guide
 
@@ -26,13 +25,17 @@ Ensure you have the following installed on your machine:
    cd tg-mini-app-nextjs
    ```
 
-3. **Create a `.env` or `.env.local` file in the root directory:**
+3. **Create a `.env.local` file in the root directory and copy the contents of `.env.sample`:**
 
-   Obtain the WalletConnect project ID from [WalletConnect](https://cloud.walletconnect.com/).
+   - Obtain the WalletConnect project ID from [WalletConnect](https://cloud.walletconnect.com/).
+
+   - Make sure to select the App Kit.
 
    ```env
-   WALLET_CONNECT_PROJECT_ID=<your_wallet_connect_project_id>
+   NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID=<your_wallet_connect_project_id>
    ```
+
+   - According change the other environment details to development or production.
 
 4. **Install dependencies:**
 
@@ -68,37 +71,23 @@ Ensure you have the following installed on your machine:
 
 To test your application within Telegram, you need to expose your local server using a tunneling service like ngrok or localtunnel.
 
-#### Using ngrok
+**Start the development server:**
 
-1. **Install ngrok if you haven't already:**
+Using npm:
 
-   ```bash
-   npm install -g ngrok
-   ```
+```bash
+npm run expose
+```
 
-2. **Expose your local server on port 3000:**
+or using yarn:
 
-   ```bash
-   ngrok http 3000
-   ```
+```bash
+yarn expose
+```
 
-3. **Note the generated public URL (e.g., `https://abc123.ngrok.io`).**
+**Alternatively:**
 
-#### Using localtunnel
-
-1. **Install localtunnel if you haven't already:**
-
-   ```bash
-   npm install -g localtunnel
-   ```
-
-2. **Expose your local server on port 3000:**
-
-   ```bash
-   lt --port 3000
-   ```
-
-3. **Note the generated public URL (e.g., `https://abc123.loca.lt`).**
+You can always use ngrok or any proxy service to expose the endpoint.
 
 ### Registering Your Bot on Telegram
 
@@ -106,9 +95,18 @@ To test your application within Telegram, you need to expose your local server u
 
 2. **Register a new bot by using the /newbot command and follow the prompts to choose a name and username.**
 
-3. **While in BotFather, set the /setmenubutton and select your bot, then paste the proxy link.**
+3. **While in BotFather, use the /setmenubutton command (It may not autocomplete).**
 
-4. **Now you can see a small button next next to the chat which will bring up the Mini App.**
+4. **Click on the bottom right square to choose the bot**
+   ![Selecting the Bot](/src/assets/botfather-tut1.png?raw=true)
+
+5. **Paste the URL for your App in which will be LocalTunnel's during development.**
+
+6. **Set the name of the button which will be used to start the mini app.**
+
+7. **Go to the Bot and now you can see a small button next to the chat which will bring up the Mini App.**
+
+8. **Repeat the steps 3-7 when you have the production URL.**
 
 ## Interacting with Contracts
 

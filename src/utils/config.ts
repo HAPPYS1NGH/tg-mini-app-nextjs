@@ -8,6 +8,7 @@ import {
   arbitrum,
   arbitrumSepolia,
   localhost,
+  mainnet,
 } from "wagmi/chains"
 
 const { wallets } = getDefaultWallets()
@@ -30,7 +31,7 @@ export const config = getDefaultConfig({
     },
   ],
   chains: [
-    arbitrum,
+    mainnet,
     ...(process.env.NEXT_PUBLIC_ENABLE_TESTNETS === "true"
       ? [arbitrumSepolia, arbitrum, localhost]
       : []),
