@@ -4,6 +4,13 @@
 
 This starter kit helps you create a mini application integrated with Ethereum and Telegram. Follow the steps below to set up and run the project.
 
+## Resources
+
+[Blog on using this Starter Kit](https://medium.com/rabble-labs/deploy-your-first-telegram-mini-app-on-ethereum-8b589f4e6411)
+
+**For Visual Learners**
+[![YouTube](http://i.ytimg.com/vi/cFLKu4sl76I/hqdefault.jpg)](https://www.youtube.com/watch?v=cFLKu4sl76I)
+
 ### Prerequisites
 
 Ensure you have the following installed on your machine:
@@ -27,7 +34,7 @@ Ensure you have the following installed on your machine:
 
 3. **Create a `.env.local` file in the root directory and copy the contents of `.env.sample`:**
 
-   - Obtain the WalletConnect project ID from [WalletConnect](https://cloud.walletconnect.com/).
+   - Obtain the WalletConnect project ID from [Reown](https://cloud.reown.com/).
 
    - Make sure to select the App Kit.
 
@@ -89,7 +96,7 @@ yarn expose
 
 You can always use ngrok or any proxy service to expose the endpoint.
 
-### Registering Your Bot on Telegram
+### Registering Your Bot on Telegram while Development
 
 1. **Open Telegram and search for `BotFather`.**
 
@@ -107,6 +114,33 @@ You can always use ngrok or any proxy service to expose the endpoint.
 7. **Go to the Bot and now you can see a small button next to the chat which will bring up the Mini App.**
 
 8. **Repeat the steps 3-7 when you have the production URL.**
+
+---
+
+### Registering Your Bot on Telegram on Production
+
+0. **Deploy your App on any Platform like Vercel or Netlify**
+
+1. **Open Telegram and search for `BotFather`.**
+
+2. **Register a new bot by using the /newbot command and follow the prompts to choose a name and username.**
+
+3. **While in BotFather, use the /setmenubutton command (It may not autocomplete).**
+
+4. **Click on the bottom right square to choose the bot**
+   ![Selecting the Bot](/src/assets/botfather-tut1.png?raw=true)
+
+5. **Paste the Production URL for your App.**
+
+6. **Set the name of the button which will be used to start the mini app.**
+
+7. **Go to the Bot and now you can see a small button next to the chat which will bring up the Mini App.**
+
+8. **Again go to BotFather, use the /setminiapp command (It may not autocomplete) and choose your Bot**
+
+9. **Paste the Production URL for your Mini App.**
+
+10. **Now you are all set for sharing your Mini App.**
 
 ## Interacting with Contracts
 
@@ -197,5 +231,8 @@ If you encounter any issues or have questions:
 - **Telegram:** [Rabble Mini App Group](https://t.me/+rFqLyk4_W-diZDZl)
 - **Twitter:** [@happys1ngh](https://twitter.com/happys1ngh)
 - **GitHub Issues:** [ETH Telegram Mini App Starter Kit Issues](https://github.com/HAPPYS1NGH/tg-mini-app-nextjs/issues)
+- **Mini Apps Hackathon:** [MAHa](https://0xmaha.com)
+
+BUIDL SHOULD NOT STOP!🏗️
 
 Happy coding! 🚀
